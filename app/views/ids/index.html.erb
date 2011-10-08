@@ -1,0 +1,21 @@
+<h1>Listing ids</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ids.each do |id| %>
+  <tr>
+    <td><%= link_to 'Show', id %></td>
+    <td><%= link_to 'Edit', edit_id_path(id) %></td>
+    <td><%= link_to 'Destroy', id, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Id', new_id_path %>
